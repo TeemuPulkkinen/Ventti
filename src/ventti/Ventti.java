@@ -17,6 +17,7 @@ public class Ventti {
     public static void main(String[] args) {
         // TODO code application logic here
         // Hello world :)
+        //kommentti
     }
     //testitesti
 }
