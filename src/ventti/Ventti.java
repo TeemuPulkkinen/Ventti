@@ -14,22 +14,32 @@ import java.util.ArrayList;
  */
 public class Ventti {
 
-    private static final int DECK_SIZE = 52;
+    
 
-    public static void main(String args[]) {
-        ArrayList<Integer> deck = new ArrayList<Integer>();
+        public static void main(String[] args) {
+            int[] korttimaara = new int[52];
+            String[] maat = {"Pata", "Hertta", "Ruutu", "Risit"};
+            String[] arvot = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jätkä", "Akka", "Ukko", "Ässä"};
 
-        for (int i = 0; i < DECK_SIZE; ++i) {
-            deck.add(i);
+            // Initialize cards
+            for (int i = 0; i < korttimaara.length; i++) {
+                korttimaara[i] = i;
+            }
+
+            // Shuffle the cards
+            for (int i = 0; i < korttimaara.length; i++) {
+                int index = (int) (Math.random() * korttimaara.length);
+                int temp = korttimaara[i];
+                korttimaara[i] = korttimaara[index];
+                korttimaara[index] = temp;
+            }
+
+            // Display the all the cards
+            for (int i = 0; i < 52; i++) {
+                String maa = maat[korttimaara[i] / 13];
+                String arvo = arvot[korttimaara[i] % 13];
+                System.out.println(arvo + " " + maa);
+            }
         }
-
-        ArrayList<Integer> shuffledDeck = new ArrayList<Integer>();
-
-        while (deck.size() > 0) {
-            int index = (int) (Math.random() * deck.size());
-            shuffledDeck.add(deck.remove(index));
-        }
-
-        System.out.println(shuffledDeck.toString());
     }
-}
+
