@@ -5,20 +5,28 @@
  */
 package ventti;
 
+//importteja
 /**
  *
  * @author s1800591
  */
 public class Ventti {
-
+    
+    /*
+    Muuttujia
+    */
+    
+    /*
+    Konstruktori
+    */
+    
     /**
      * @param args the command line arguments
      */
+    
+    
     public static void main(String[] args) {
-        // TODO code application logic here
-        // Hello world :)
-        //kommentti
-        //heihei
+        
     }
-    //testitesti
+    
 }
