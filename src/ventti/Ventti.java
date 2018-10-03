@@ -14,32 +14,28 @@ import java.util.ArrayList;
  */
 public class Ventti {
 
-    
+    public static void main(String[] args) {
+        int[] korttimaara = new int[52];
+        String[] maat = {"Pata", "Hertta", "Ruutu", "Risti"};
+        String[] arvot = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jätkä", "Akka", "Ukko", "Ässä"};
 
-        public static void main(String[] args) {
-            int[] korttimaara = new int[52];
-            String[] maat = {"Pata", "Hertta", "Ruutu", "Risit"};
-            String[] arvot = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jätkä", "Akka", "Ukko", "Ässä"};
+        // Initialize cards
+        for (int i = 0; i < korttimaara.length; i++) {
+            korttimaara[i] = i;
+        }
 
-            // Initialize cards
-            for (int i = 0; i < korttimaara.length; i++) {
-                korttimaara[i] = i;
-            }
+        // Shuffle the cards
+        for (int i = 0; i < korttimaara.length; i++) {
+            int index = (int) (Math.random() * korttimaara.length);
+            int temp = korttimaara[i];
+            korttimaara[i] = korttimaara[index];
+            korttimaara[index] = temp;
+        }
 
-            // Shuffle the cards
-            for (int i = 0; i < korttimaara.length; i++) {
-                int index = (int) (Math.random() * korttimaara.length);
-                int temp = korttimaara[i];
-                korttimaara[i] = korttimaara[index];
-                korttimaara[index] = temp;
-            }
-
-            // Display the all the cards
+        /* Display the all the cards
             for (int i = 0; i < 52; i++) {
                 String maa = maat[korttimaara[i] / 13];
                 String arvo = arvot[korttimaara[i] % 13];
-                System.out.println(arvo + " " + maa);
-            }
-        }
+                System.out.println(arvo + " " + maa */
     }
-
+}
