@@ -44,8 +44,8 @@ public class Ventti {
         int pelaajankasi = 0;
         int emannankasi = 0;
         
-        
-        
+        //arvot.get (Math.random()); 
+            
             
         }
     }
