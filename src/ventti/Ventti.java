@@ -6,27 +6,30 @@
 package ventti;
 
 //importteja
+import java.util.ArrayList;
+
 /**
  *
  * @author s1800591
  */
 public class Ventti {
-    
-    /*
-    Muuttujia
-    */
-    
-    /*
-    Konstruktori
-    */
-    
-    /**
-     * @param args the command line arguments
-     */
-    
-    
-    public static void main(String[] args) {
-        
+
+    private static final int DECK_SIZE = 52;
+
+    public static void main(String args[]) {
+        ArrayList<Integer> deck = new ArrayList<Integer>();
+
+        for (int i = 0; i < DECK_SIZE; ++i) {
+            deck.add(i);
+        }
+
+        ArrayList<Integer> shuffledDeck = new ArrayList<Integer>();
+
+        while (deck.size() > 0) {
+            int index = (int) (Math.random() * deck.size());
+            shuffledDeck.add(deck.remove(index));
+        }
+
+        System.out.println(shuffledDeck.toString());
     }
-    
 }
