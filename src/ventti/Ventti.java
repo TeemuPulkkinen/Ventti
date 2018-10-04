@@ -5,7 +5,9 @@
  */
 package ventti;
 
-import java.util.Random;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 
 
@@ -17,10 +19,10 @@ public class Ventti {
 
     public static void main(String[] args) {
         int[] korttimaara = new int[52];
-        int[] arvot = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
+        Integer[] arvot = new Integer[] {2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9, 10, 10, 10, 10, 11, 11, 11, 11, 12, 12, 12, 12, 13, 13, 13, 13, 14, 14, 14, 14};
 
         // Initialize cards
-        for (int i = 0; i < korttimaara.length; i++) {
+        /*for (int i = 0; i < korttimaara.length; i++) {
             korttimaara[i] = i;
         }
 
@@ -37,18 +39,21 @@ public class Ventti {
                 int arvo = arvot[korttimaara[i] % 13];
                 System.out.println(arvo);
             }        
-        
+        */
         System.out.println("Terve tuloa pelaamaan Teemun ja Pinjan eeppistä venttipeliä!");
         System.out.println("Tässä versiossa emäntä voittaa tasapelit ja ässän arvo on 14.");
         
-        int pelaajankasi = 0;
-        int emannankasi = 0;
+        List<Integer> l = Arrays.asList(arvot);
         
-        //Random random = new Random();
-        //pelaajankasi = random.nextInt(korttimaara.size());
+        Collections.shuffle(l);
+        
+        int element = l.get(1);
+        
+        System.out.println("Ensimmäinen korttisi on " + element + ".");
+        }
         
         
             
         }
-    }
+
 
