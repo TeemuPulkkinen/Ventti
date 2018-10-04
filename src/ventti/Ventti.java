@@ -62,12 +62,16 @@ public class Ventti {
         Scanner lukija = new Scanner(System.in);
         luettu = lukija.nextLine();
 
-        while (luettu.equals("joo")) {
-            element = l.get(rand.nextInt(l.size()));
-            System.out.println("Vedetty kortti on " + element + ".");
-            pelaajanKasi += element;
-            System.out.println("Kätesi summa on yhteensä " + pelaajanKasi + ". Haluatko vetää uuden kortin? (joo/ei)");
-            lukija.nextLine();
+        if (luettu.equals("joo")) {
+            while (true) {
+                element = l.get(rand.nextInt(l.size()));
+                System.out.println("Vedetty kortti on " + element + ".");
+                pelaajanKasi += element;
+                System.out.println("Kätesi summa on yhteensä " + pelaajanKasi + ". Haluatko vetää uuden kortin? (joo/ei)");
+                lukija.nextLine();
+            }
+        } else {
+            System.out.println("Loppu.");
 
         }
     }
