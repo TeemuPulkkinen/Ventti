@@ -50,7 +50,7 @@ public class Ventti {
         List<Integer> l = Arrays.asList(arvot);
 
         Collections.shuffle(l);
-        
+
         Random rand = new Random();
         int element = l.get(rand.nextInt(l.size()));
 
@@ -68,9 +68,7 @@ public class Ventti {
             pelaajanKasi += element;
             System.out.println("Kätesi summa on yhteensä " + pelaajanKasi + ". Haluatko vetää uuden kortin? (joo/ei)");
             lukija.nextLine();
-            if (luettu.equals("ei")) {
-                break;
-            }
+
         }
     }
 }
