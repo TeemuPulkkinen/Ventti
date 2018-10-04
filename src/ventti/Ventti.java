@@ -8,6 +8,7 @@ package ventti;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -45,25 +46,31 @@ public class Ventti {
 
         int pelaajanKasi = 0;
         int emannanKasi = 0;
+        String luettu;
         List<Integer> l = Arrays.asList(arvot);
 
         Collections.shuffle(l);
+        
+        Random rand = new Random();
+        int element = l.get(rand.nextInt(l.size()));
 
-        int element = l.get(1);
+        //int element = l.get(1);
         pelaajanKasi += element;
 
         System.out.println("Ensimmäinen korttisi on " + element + ".");
-        System.out.println("Kätesi summa on yhteensä " +pelaajanKasi+". Haluatko vetää uuden kortin?");
+        System.out.println("Kätesi summa on yhteensä " + pelaajanKasi + ". Haluatko vetää uuden kortin? (joo/ei)");
         Scanner lukija = new Scanner(System.in);
-        String luettu = lukija.nextLine();
-        
-        while (luettu = "joo") {
-            int element = l.get(1);
-        
-    }
-        
-    }
+        luettu = lukija.nextLine();
 
+        while (luettu.equals("joo")) {
+            element = l.get(rand.nextInt(l.size()));
+            System.out.println("Vedetty kortti on " + element + ".");
+            pelaajanKasi += element;
+            System.out.println("Kätesi summa on yhteensä " + pelaajanKasi + ". Haluatko vetää uuden kortin? (joo/ei)");
+            lukija.nextLine();
+            if (luettu.equals("ei")) {
+                break;
+            }
+        }
+    }
 }
-
-
