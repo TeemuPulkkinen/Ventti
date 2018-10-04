@@ -72,7 +72,7 @@ public class Ventti {
             }
         } else {
             System.out.println("Loppu.");
-
         }
+        
     }
 }
