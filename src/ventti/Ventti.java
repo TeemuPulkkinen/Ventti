@@ -8,6 +8,7 @@ package ventti;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  *
@@ -42,13 +43,25 @@ public class Ventti {
         System.out.println("Terve tuloa pelaamaan Teemun ja Pinjan eeppistä venttipeliä!");
         System.out.println("Tässä versiossa emäntä voittaa tasapelit ja ässän arvo on 14.");
 
+        int pelaajanKasi = 0;
+        int emannanKasi = 0;
         List<Integer> l = Arrays.asList(arvot);
 
         Collections.shuffle(l);
 
         int element = l.get(1);
+        pelaajanKasi += element;
 
         System.out.println("Ensimmäinen korttisi on " + element + ".");
+        System.out.println("Kätesi summa on yhteensä " +pelaajanKasi+". Haluatko vetää uuden kortin?");
+        Scanner lukija = new Scanner(System.in);
+        String luettu = lukija.nextLine();
+        
+        while (luettu = "joo") {
+            int element = l.get(1);
+        
+    }
+        
     }
 
 }
