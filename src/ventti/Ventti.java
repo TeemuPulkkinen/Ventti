@@ -55,8 +55,9 @@ public class Ventti {
         //määrittely sille onko pelaaja vielä pelissä. Jos on, niin on emännän vuoro. Muuten pelaaja häviää.
         if (pelaajanKasi <= 21) {
             System.out.println("Loppukäsi on " + pelaajanKasi);
+            System.out.println("Nyt on emännän vuoro.");
             while (emannanKasi <= 20) {
-                System.out.println("Nyt on emännän vuoro.");
+                
                 element = l.get(rand.nextInt(l.size()));
                 System.out.println("Emännän kortti on " + element + ".");
                 emannanKasi += element;
