@@ -9,8 +9,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-
-
 /**
  *
  * @author s1800591
@@ -18,8 +16,9 @@ import java.util.List;
 public class Ventti {
 
     public static void main(String[] args) {
+
         int[] korttimaara = new int[52];
-        Integer[] arvot = new Integer[] {2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9, 10, 10, 10, 10, 11, 11, 11, 11, 12, 12, 12, 12, 13, 13, 13, 13, 14, 14, 14, 14};
+        Integer[] arvot = new Integer[]{2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9, 10, 10, 10, 10, 11, 11, 11, 11, 12, 12, 12, 12, 13, 13, 13, 13, 14, 14, 14, 14};
 
         // Initialize cards
         /*for (int i = 0; i < korttimaara.length; i++) {
@@ -39,21 +38,19 @@ public class Ventti {
                 int arvo = arvot[korttimaara[i] % 13];
                 System.out.println(arvo);
             }        
-        */
+         */
         System.out.println("Terve tuloa pelaamaan Teemun ja Pinjan eeppistä venttipeliä!");
         System.out.println("Tässä versiossa emäntä voittaa tasapelit ja ässän arvo on 14.");
-        
+
         List<Integer> l = Arrays.asList(arvot);
-        
+
         Collections.shuffle(l);
-        
+
         int element = l.get(1);
-        
+
         System.out.println("Ensimmäinen korttisi on " + element + ".");
-        }
-        
-        
-            
-        }
+    }
+
+}
 
 
