@@ -17,8 +17,7 @@ public class Ventti {
 
     public static void main(String[] args) {
         int[] korttimaara = new int[52];
-        String[] maat = {"Pata", "Hertta", "Ruutu", "Risti"};
-        String[] arvot = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "jätkä", "akka", "kurko", "ässä"};
+        int[] arvot = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
 
         // Initialize cards
         for (int i = 0; i < korttimaara.length; i++) {
@@ -35,9 +34,8 @@ public class Ventti {
 
         // Display the all the cards
             for (int i = 0; i < 52; i++) {
-                String maa = maat[korttimaara[i] / 13];
-                String arvo = arvot[korttimaara[i] % 13];
-                System.out.println(arvo + "" + maa);
+                int arvo = arvot[korttimaara[i] % 13];
+                System.out.println(arvo);
             }        
         
         System.out.println("Terve tuloa pelaamaan Teemun ja Pinjan eeppistä venttipeliä!");
@@ -48,7 +46,8 @@ public class Ventti {
         
         //Random random = new Random();
         //pelaajankasi = random.nextInt(korttimaara.size());
-            
+        
+        
             
         }
     }
