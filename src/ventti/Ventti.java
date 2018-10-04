@@ -5,6 +5,8 @@
  */
 package ventti;
 
+import java.util.Random;
+
 
 
 /**
@@ -44,7 +46,8 @@ public class Ventti {
         int pelaajankasi = 0;
         int emannankasi = 0;
         
-        //arvot.get (Math.random()); 
+        //Random random = new Random();
+        //pelaajankasi = random.nextInt(korttimaara.size());
             
             
         }
