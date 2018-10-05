@@ -72,7 +72,7 @@ public class Ventti {
         } else if (emannanKasi <= pelaajanKasi && emannanKasi <= 21) {
             System.out.println("Emäntä voitti!");
         //mikäli pelaajan käsi on pienempi tai yhtäsuuri kuin 21 niin hän voittaa
-        } else if (pelaajanKasi <= 21) {
+        } else if (pelaajanKasi <= 21 && pelaajanKasi > emannanKasi) {
             System.out.println("Voitit!");
 
         } else {
