@@ -64,6 +64,7 @@ public class Ventti {
             System.out.println("Olet nostanut " + pelaajanKortit + " korttia.");
             System.out.println("Kätesi summa on yhteensä " + pelaajanKasi + ". Haluatko vetää uuden kortin? (joo/ei)");
             luettu = lukija.nextLine();
+            
         }
         //määrittely sille onko pelaaja vielä pelissä. Jos on, niin on emännän vuoro. Muuten pelaaja häviää.
         if (pelaajanKasi <= 21) {
@@ -88,5 +89,5 @@ public class Ventti {
         } else if (pelaajanKasi <= 21 || pelaajanKortit == 5) {
             System.out.println("Voitit!");
         }
-    }
+    }  
 }
