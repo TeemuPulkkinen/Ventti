@@ -63,7 +63,7 @@ public class Ventti {
                 emannanKasi += element;
                 System.out.println("Emäntä nostaa uuden kortin.");
                 System.out.println("Emännän käden summa on " + emannanKasi + ".");
-
+                System.out.println("Tämä on kivaa");
             }
 
         }
