@@ -56,13 +56,14 @@ public class Ventti {
         if (pelaajanKasi <= 21) {
             System.out.println("Loppukäsi on " + pelaajanKasi);
             System.out.println("Nyt on emännän vuoro.");
-            while (emannanKasi <= 20) {
-                
+            while (emannanKasi < 20) {
+
                 element = l.get(rand.nextInt(l.size()));
                 System.out.println("Emännän kortti on " + element + ".");
                 emannanKasi += element;
+                System.out.println("Emäntä nostaa uuden kortin.");
                 System.out.println("Emännän käden summa on " + emannanKasi + ".");
-               
+
             }
 
         }
@@ -71,12 +72,10 @@ public class Ventti {
             System.out.println("Hävisit!");
         } else if (emannanKasi <= pelaajanKasi && emannanKasi <= 21) {
             System.out.println("Emäntä voitti!");
-        //mikäli pelaajan käsi on pienempi tai yhtäsuuri kuin 21 niin hän voittaa
-        } else if (pelaajanKasi <= 21 && pelaajanKasi > emannanKasi) {
+            //mikäli pelaajan käsi on pienempi tai yhtäsuuri kuin 21 niin hän voittaa
+        } else {
             System.out.println("Voitit!");
 
-        } else {
-            System.out.println("Hävisit!");
         }
     }
 }
