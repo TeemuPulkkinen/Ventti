@@ -83,7 +83,7 @@ public class Ventti {
 
         if (pelaajanKasi > 21) {
             System.out.println("Hävisit!");
-        } else if (emannanKasi <= pelaajanKasi && emannanKasi <= 21) {
+        } else if (emannanKasi >= pelaajanKasi && emannanKasi <= 21) {
             System.out.println("Emäntä voitti!");
             //mikäli pelaajan käsi on pienempi tai yhtäsuuri kuin 21 tai kädessä on 5 korttia niin hän voittaa
         } else if (pelaajanKasi <= 21 || pelaajanKortit == 5) {
