@@ -74,7 +74,10 @@ public class Ventti {
             }
 
         }
-
+        
+        if (pelaajanKasi == emannanKasi) {
+            System.out.println("Emäntä voitti!");
+        }
         if (pelaajanKasi > 21) {
             System.out.println("Hävisit!");
 
